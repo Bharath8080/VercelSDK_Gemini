@@ -140,7 +140,7 @@ const renderTable = (tableLines: string[], key: number) => {
 };
 
 // Parse inline bold text
-const parseInlineBold = (text) => {
+const parseInlineBold = (text: string) => {
   const parts = [];
   let currentText = '';
   let i = 0;
@@ -193,7 +193,7 @@ export default function ChatPage() {
     }
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSend();
