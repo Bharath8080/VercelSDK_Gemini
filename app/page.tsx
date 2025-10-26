@@ -79,7 +79,8 @@ const parseMarkdown = (text: string) => {
       }
       
       if (tableLines.length > 2) {
-        elements.push(renderTable(tableLines, key++));
+        const table = renderTable(tableLines, key++);
+        if (table) elements.push(table);
         i = j;
         continue;
       }
