@@ -101,7 +101,7 @@ const parseMarkdown = (text: string) => {
 };
 
 // Render markdown table
-const renderTable = (tableLines, key) => {
+const renderTable = (tableLines: string[], key: number) => {
   const rows = tableLines.map(line => 
     line.split('|').map(cell => cell.trim()).filter(cell => cell)
   );
