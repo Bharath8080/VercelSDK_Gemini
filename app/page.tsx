@@ -25,7 +25,6 @@ const SendIcon = () => (
 
 // Markdown parser for bold text, lists, headings, and tables
 const parseMarkdown = (text: string) => {
-
   if (!text) return null;
   
   const lines = text.split('\n');
