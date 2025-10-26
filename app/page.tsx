@@ -62,7 +62,7 @@ const parseMarkdown = (text: string) => {
   if (!text) return null;
   
   const lines = text.split('\n');
-  const elements: JSX.Element[] = [];
+  const elements: React.ReactElement[] = [];
   let key = 0;
   let i = 0;
 
@@ -165,8 +165,8 @@ const renderTable = (tableLines: string[], key: number) => {
   );
 };
 
-const parseInlineBold = (text: string): (JSX.Element | string)[] | string => {
-  const parts: (JSX.Element | string)[] = [];
+const parseInlineBold = (text: string): (React.ReactElement | string)[] | string => {
+  const parts: (React.ReactElement | string)[] = [];
   let currentText = '';
   let i = 0;
   let key = 0;
